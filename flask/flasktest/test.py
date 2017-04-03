@@ -7,8 +7,10 @@ app.debug = True
 
 @app.route("/")
 def hello():
-    s = "Koxme"
-    return render_template('index.html', name=s)
+    name = "Koxme"
+    s2 = "Peru"
+
+    return render_template('index.html', name=name, name2=s2)
 
 @app.route("/suma/<x>/<y>")
 def sumaxy(x, y):
@@ -17,7 +19,8 @@ def sumaxy(x, y):
 
 @app.route("/alumnos")
 def lista_alumnos():
-    return "Alumnos"
+    lista_alumnos = ['Koxme', 'Peru', 'Mari']
+    return render_template('alumnos.html', alumnos=lista_alumnos)
 
 
 @app.route("/nombre/<s>")
