@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <style>
+            #boton_alumno {font-size: 20px;}
+            #boton_alumno_koxme {font-size: 5px; color: red}
+
+        </style>
+    </head>
+    {% for alumno in alumnos %}
+        <input type="button" id="boton_alumno_{{ alumno }}" value="{{ alumno }}"></input><br>
+    {% endfor %}    
+</html>
